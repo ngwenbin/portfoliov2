@@ -12,7 +12,9 @@ const Layout = ({ children, fonts }: LayoutProps) => {
   return (
     <>
       <Navbar tabLinksArray={HomePageNavBarLinks} fonts={fonts} />
-      <main className={`${fonts?.className} font-inter`}>{children}</main>
+      <main className={`${fonts?.className} font-inter h-full`}>
+        {children}
+      </main>
     </>
   );
 };

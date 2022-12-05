@@ -2,12 +2,8 @@ import { Navlink } from "@/types/navbar";
 
 export const HomePageNavBarLinks: Array<Navlink> = [
   {
-    title: "Wen Bin",
-    url: "",
-  },
-  {
-    title: "Blog",
-    url: "",
+    title: "Kim",
+    url: "/",
   },
   {
     title: "Resume",
@@ -16,5 +12,9 @@ export const HomePageNavBarLinks: Array<Navlink> = [
   {
     title: "Projects",
     url: "/projects",
+  },
+  {
+    title: "Goals",
+    url: "/goals",
   },
 ];

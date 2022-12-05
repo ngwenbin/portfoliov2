@@ -15,7 +15,7 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
   return (
     <div
       className={clsx(
-        "flex items-center gap-x-3 pt-1 absolute",
+        "flex items-center gap-x-3 pt-1 absolute px-8",
         `${fonts?.className} font-inter`
       )}
     >

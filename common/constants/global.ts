@@ -2,7 +2,7 @@ import { Navlink } from "@/types/navbar";
 
 export const HomePageNavBarLinks: Array<Navlink> = [
   {
-    title: "Kim",
+    title: "Wenbin",
     url: "/",
   },
   {

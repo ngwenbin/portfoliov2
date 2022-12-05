@@ -1,12 +1,18 @@
 import { HomePageNavBarLinks } from "@/common/constants/global";
 import React from "react";
 import Navbar from "../Navbar";
+import { NextFont } from "@next/font/dist/types";
 
-const Layout = ({ children }: { children: JSX.Element }) => {
+interface LayoutProps {
+  children: JSX.Element;
+  fonts?: NextFont;
+}
+
+const Layout = ({ children, fonts }: LayoutProps) => {
   return (
     <>
-      <Navbar tabLinksArray={HomePageNavBarLinks} />
-      <main>{children}</main>
+      <Navbar tabLinksArray={HomePageNavBarLinks} fonts={fonts} />
+      <main className={`${fonts?.className} font-inter`}>{children}</main>
     </>
   );
 };

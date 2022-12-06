@@ -1,6 +1,7 @@
 import Image from "next/image";
 import profilePic from "@/common/images/profile.jpg";
 import IconsShowCase from "@/components/IconShowCase";
+import MagicButton from "@/components/MagicButton";
 import {
   languageIcon,
   technologiesIcon,
@@ -26,9 +27,7 @@ export default function Home() {
         endless possibilities of what one can achieve with a simple laptop.
         I&apos;m naturally curious, unforgivably determined, and perpetually
         working on trying to over-engineer something.
-        <button className="rounded-md bg-gray-200 py-2 px-4 mt-8">
-          Say Hello
-        </button>
+        <MagicButton />
       </div>
       <div className="flex gap-x-2 flex-col md:flex-row items-center md:items-start gap-y-6 flex-[1]">
         <IconsShowCase icons={languageIcon} label="Languages" />

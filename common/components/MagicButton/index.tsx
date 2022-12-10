@@ -10,15 +10,14 @@ interface MousePositionObject {
 }
 type ButtonPositionObject = MousePositionObject;
 
-interface ButtonSize {
-  width: number;
-  height: number;
-}
-
 interface ZoneParameter {
   zoneIdx: string;
   paddingRadius: number; // Radius from local focal point
   translationAcc: string;
+}
+
+interface MagicButtonProps {
+  onChangeHandler?: () => void;
 }
 
 const zones: Array<ZoneParameter> = [
@@ -53,7 +52,7 @@ const retrieveCurrZoneParams = (
   return undefined;
 };
 
-const MagicButton = () => {
+const MagicButton = ({ onChangeHandler }: MagicButtonProps) => {
   const [translateAcceleration, setTranslateAcceleration] = useState<string>();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const mousePosRef = useRef<MousePositionObject>();
@@ -108,6 +107,7 @@ const MagicButton = () => {
       <div className="p-8 h-min mx-auto">
         <button
           ref={buttonRef}
+          onClick={() => onChangeHandler && onChangeHandler()}
           style={{
             transform: `translateX(${
               translateAcceleration

@@ -1,3 +1,5 @@
+import LinkIcon from "@/common/images/LinkIcon";
+import Link from "next/link";
 import React from "react";
 
 interface ProfessionalExperienceType {
@@ -98,7 +100,7 @@ const Resume = () => {
         </ol>
       </div>
       <div className="my-12">
-        <h2>Projects</h2>
+        <h2>Notable Projects</h2>
         <ol className="flex flex-col space-y-8 mt-4">
           {notableProjects.map((item, key) => {
             return (
@@ -106,7 +108,15 @@ const Resume = () => {
                 key={key}
                 className="flex flex-col items-start space-y-2 font-light"
               >
-                <p className="text-lg font-bold">{item.title}</p>
+                <div className="flex items-center gap-x-1">
+                  <p className="text-lg font-bold">{item.title}</p>
+                  {item.url && (
+                    <Link href={item.url}>
+                      <LinkIcon className="w-4 h-4 hover:text-cyan-600 text-orange-500" />
+                    </Link>
+                  )}
+                </div>
+
                 <p>{item.description}</p>
               </li>
             );

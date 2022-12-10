@@ -55,7 +55,7 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
           className="p-4 bg-white"
           onClick={() => setShowMenu((curr) => !curr)}
         >
-          <ThreeBars />
+          <ThreeBars className="w-6 h-6 text-black" />
         </button>
         {showMenu ? (
           <div className="flex flex-col w-2/3 bg-white ">

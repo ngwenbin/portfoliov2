@@ -1,4 +1,5 @@
 import LinkIcon from "@/common/images/LinkIcon";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
@@ -98,6 +99,9 @@ const achievements: Array<Achievement> = [
 const Resume = () => {
   return (
     <div className="max-w-3xl mx-auto pt-8 px-4">
+      <Head>
+        <title>Resume| Wen Bin</title>
+      </Head>
       <h1>Resume</h1>
       <div className="my-12">
         <h2>Professional Experience</h2>

@@ -6,6 +6,7 @@ import {
   languageIcon,
   technologiesIcon,
 } from "@/components/IconShowCase/importHelper";
+import Head from "next/head";
 
 const onChangeHandler = () => {
   window.alert("Hello");
@@ -14,6 +15,9 @@ const onChangeHandler = () => {
 export default function Home() {
   return (
     <div className="p-2 flex flex-col items-center text-gray-800 h-full min-h-full px-4 gap-y-12 justify-between">
+      <Head>
+        <title>Frontend Engineer | Wen Bin</title>
+      </Head>
       <div className="flex flex-col w-full items-center gap-y-4 flex-[2] justify-center">
         <Image src={profilePic} className="rounded-full w-40 h-auto" alt="Me" />
         <h1 className="text-4xl font-bold pt-6">Ng Wen Bin</h1>

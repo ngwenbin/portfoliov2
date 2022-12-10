@@ -1,4 +1,23 @@
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-[30px] font-bold leading-tight tracking-[-1px];
+  }
+  h2 {
+    @apply text-[26px] font-bold leading-snug tracking-[0.1px];
+  }
+  h3 {
+    @apply text-[22px] font-bold leading-[1.38] tracking-[0.1px];
+  }
+  h4 {
+    @apply text-xl font-bold leading-[1.64] tracking-[0.1px];
+  }
+  h5 {
+    @apply text-lg font-semibold leading-[1.64] tracking-[0.1px];
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 

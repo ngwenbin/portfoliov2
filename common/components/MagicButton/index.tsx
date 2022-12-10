@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 enum MAX_TRANSLATION {
   X = 300,
-  Y = 50,
+  Y = 40,
 }
 
 interface MousePositionObject {
@@ -25,13 +25,8 @@ const zones: Array<ZoneParameter> = [
   // Smallest zone first
   {
     zoneIdx: "0",
-    paddingRadius: 90,
-    translationAcc: "50ms",
-  },
-  {
-    zoneIdx: "1",
-    paddingRadius: 200,
-    translationAcc: "100ms",
+    paddingRadius: 120,
+    translationAcc: "120",
   },
 ];
 
@@ -131,7 +126,7 @@ const MagicButton = () => {
             }px)`,
             transitionDuration: `${translateAcceleration}ms`,
           }}
-          className="rounded-md bg-gray-200 py-2 px-4 whitespace-nowrap transition-transform ease-out"
+          className="text-white rounded-md bg-cyan-500 shadow-lg shadow-cyan-500/50 py-2 px-4 whitespace-nowrap transition-transform ease-out"
         >
           Say Hello
         </button>

@@ -50,15 +50,16 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
           "md:hidden absolute w-full h-screen ",
           showMenu ? "backdrop-blur-[6px] bg-gray-600/30" : ""
         )}
+        onClick={() => console.log("ok")}
       >
         <button
-          className="p-4 bg-white"
+          className="p-4 bg-white relative"
           onClick={() => setShowMenu((curr) => !curr)}
         >
           <ThreeBars className="w-6 h-6 text-black" />
         </button>
         {showMenu ? (
-          <div className="flex flex-col w-2/3 bg-white ">
+          <div className="flex flex-col w-2/3 bg-white relative ">
             {tabLinksArray.map((tabLink, key) => (
               <Link
                 key={key}
@@ -79,6 +80,10 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
             ))}
           </div>
         ) : null}
+        <div
+          className="relative h-screen w-full z-10"
+          onClick={() => setShowMenu((curr) => !curr)}
+        />
       </div>
     </>
   );

@@ -8,7 +8,7 @@ import {
 } from "@/components/IconShowCase/importHelper";
 import Head from "next/head";
 
-const onChangeHandler = () => {
+const onClickHandler = () => {
   window.alert("Hello");
 };
 
@@ -36,7 +36,7 @@ export default function Home() {
         just a simple laptop. I&apos;m naturally curious, unforgivably
         determined, and perpetually working on trying to over-engineer
         something.
-        <MagicButton onChangeHandler={onChangeHandler} />
+        <MagicButton onClickHandler={onClickHandler} />
       </div>
       <div className="flex gap-x-2 flex-col md:flex-row items-center md:items-start gap-y-6 flex-[1]">
         <IconsShowCase icons={languageIcon} label="Languages" />

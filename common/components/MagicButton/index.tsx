@@ -17,7 +17,7 @@ interface ZoneParameter {
 }
 
 interface MagicButtonProps {
-  onChangeHandler?: () => void;
+  onClickHandler?: () => void;
 }
 
 const zones: Array<ZoneParameter> = [
@@ -52,7 +52,7 @@ const retrieveCurrZoneParams = (
   return undefined;
 };
 
-const MagicButton = ({ onChangeHandler }: MagicButtonProps) => {
+const MagicButton = ({ onClickHandler }: MagicButtonProps) => {
   const [translateAcceleration, setTranslateAcceleration] = useState<string>();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const mousePosRef = useRef<MousePositionObject>();
@@ -107,7 +107,7 @@ const MagicButton = ({ onChangeHandler }: MagicButtonProps) => {
       <div className="p-8 h-min mx-auto">
         <button
           ref={buttonRef}
-          onClick={() => onChangeHandler && onChangeHandler()}
+          onClick={() => onClickHandler && onClickHandler()}
           style={{
             transform: `translateX(${
               translateAcceleration

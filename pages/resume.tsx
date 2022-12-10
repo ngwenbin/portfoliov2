@@ -16,6 +16,11 @@ interface Project {
   url?: string;
 }
 
+interface Achievement {
+  year: number;
+  achievements: Array<string>;
+}
+
 const professionalExperienceContent: Array<ProfessionalExperienceType> = [
   {
     title: "Frontend Software Engineer",
@@ -69,6 +74,24 @@ const notableProjects: Array<Project> = [
     description:
       "Designed and developed an interactive map with React.js, deck.gl, Aloglia search and\
     internal APIs to provide giving impact data visualization for stakeholders.",
+  },
+];
+
+const achievements: Array<Achievement> = [
+  {
+    year: 2022,
+    achievements: [
+      "Citi HackOverflow 2022 (Participation)",
+      "Singapore Airlines (SIA) AppChallenge 2022 (Participation)",
+    ],
+  },
+  {
+    year: 2021,
+    achievements: ["Shopee Ultra-Hackathon (Participation)"],
+  },
+  {
+    year: 2020,
+    achievements: ["Singapore Airlines (SIA) AppChallenge 2020 (2nd Place)"],
   },
 ];
 
@@ -131,7 +154,7 @@ const Resume = () => {
             <p className="text-lg font-bold">
               National University of Singapore
             </p>
-            <ol className="list-disc list-inside">
+            <ol className="list-disc list-inside space-y-1">
               <li>Aug 2019 - Dec 2022</li>
               <li>B. Eng, Mechanical Engineering</li>
               <li>Second Upper Honours - CAP: 4.44 / 5.0</li>
@@ -141,7 +164,7 @@ const Resume = () => {
             <p className="text-lg font-bold">
               Technical University of Munich, TUM
             </p>
-            <ol className="list-disc list-inside">
+            <ol className="list-disc list-inside space-y-1">
               <li>Jan 2020 - Jul 2020</li>
               <li>
                 Part of the prestigious NUS Overseas College (NOC)
@@ -154,18 +177,25 @@ const Resume = () => {
 
       <div className="my-12 pb-32">
         <h2>Achievements</h2>
-        <div>
-          <p className="text-xl font-semibold py-6">2021</p>
-          <ul className="list-disc list-inside">
-            <li>Shopee Ultra-Hackathon (Participation)</li>
-          </ul>
-        </div>
-        <div>
-          <p className="text-xl font-semibold py-6">2020</p>
-          <ul className="list-disc list-inside">
-            <li>Singapore Airlines (SIA) AppChallenge 2020 (2nd Place)</li>
-          </ul>
-        </div>
+        {achievements
+          .sort((a, b) => (a["year"] < b["year"] ? 1 : -1))
+          .map((item, key) => {
+            return (
+              <div key={`year_${key}`}>
+                <p className="text-xl font-semibold py-6">{item.year}</p>
+                {item.achievements.map((filteredItem, key) => {
+                  return (
+                    <ul
+                      className="list-disc list-inside"
+                      key={`achieve_${key}`}
+                    >
+                      <li>{filteredItem}</li>
+                    </ul>
+                  );
+                })}
+              </div>
+            );
+          })}
       </div>
     </div>
   );

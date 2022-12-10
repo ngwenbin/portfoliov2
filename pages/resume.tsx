@@ -1,4 +1,4 @@
-import LinkIcon from "@/common/images/LinkIcon";
+import { LinkIcon, DownloadIcon } from "@/common/images";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
@@ -102,7 +102,30 @@ const Resume = () => {
       <Head>
         <title>Resume| Wen Bin</title>
       </Head>
-      <h1>Resume</h1>
+      <div className="flex items-center gap-x-3">
+        <h1>Resume</h1>
+        <Link href="/resume.pdf" download="ngwenbin_resume.pdf" target="_blank">
+          <DownloadIcon className="w-5 h-5" />
+        </Link>
+      </div>
+      <div className="flex pt-4 items-center gap-x-3">
+        <a
+          href="https://github.com/ngwenbin"
+          className="text-orange-500 hover:text-cyan-600"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+        <a
+          href="https://sg.linkedin.com/in/ngwenbin"
+          className="text-orange-500 hover:text-cyan-600"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Linkedin
+        </a>
+      </div>
       <div className="my-12">
         <h2>Professional Experience</h2>
         <ol className="flex flex-col space-y-8 mt-4">

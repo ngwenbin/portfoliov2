@@ -19,7 +19,12 @@ export default function Home() {
         <title>Frontend Engineer | Wen Bin</title>
       </Head>
       <div className="flex flex-col w-full items-center gap-y-4 flex-[2] justify-center">
-        <Image src={profilePic} className="rounded-full w-40 h-auto" alt="Me" />
+        <Image
+          src={profilePic}
+          className="rounded-full w-40 h-auto"
+          alt="Me"
+          placeholder="blur"
+        />
         <h1 className="text-4xl font-bold pt-6">Ng Wen Bin</h1>
         <h2 className="text-xl text-center max-w-md">
           A Frontend Engineer who loves to build things and solve tough problems

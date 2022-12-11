@@ -47,19 +47,19 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
       </div>
       <div
         className={clsx(
-          "md:hidden absolute w-full h-screen ",
+          "md:hidden absolute w-full h-screen",
           showMenu ? "backdrop-blur-[6px] bg-gray-600/30" : ""
         )}
         onClick={() => console.log("ok")}
       >
         <button
-          className="p-4 bg-white relative"
+          className="p-4 bg-white absolute right-0 z-10"
           onClick={() => setShowMenu((curr) => !curr)}
         >
           <ThreeBars className="w-6 h-6 text-black" />
         </button>
         {showMenu ? (
-          <div className="flex flex-col w-2/3 bg-white relative ">
+          <div className="flex flex-col max-w-xs bg-white text-right absolute right-0 top-14 z-10 rounded-l-xl">
             {tabLinksArray.map((tabLink, key) => (
               <Link
                 key={key}
@@ -71,15 +71,25 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
                       : "#1f2937",
                 }}
                 onClick={() => setShowMenu((curr) => !curr)}
-                className={clsx("py-3 px-5 border-b border border-gray-50", {
-                  "font-bold": key === 0,
-                })}
+                className={clsx(
+                  "py-3 pl-24 pr-4 border-b border border-gray-50 rounded-xl",
+                  {
+                    "font-bold": key === 0,
+                  }
+                )}
               >
                 {tabLink.title}
               </Link>
             ))}
           </div>
         ) : null}
+        <div
+          className={clsx(
+            "relative h-screen w-full -z-10",
+            !showMenu && "hidden"
+          )}
+          onClick={() => setShowMenu((curr) => !curr)}
+        />
       </div>
     </>
   );

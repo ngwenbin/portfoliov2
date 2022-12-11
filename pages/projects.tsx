@@ -88,8 +88,7 @@ const Projects = () => {
                   <Image
                     src={item.image}
                     alt=""
-                    placeholder="blur"
-                    className="object-cover max-w-xs md:max-w-md h-auto rounded-md"
+                    className="max-w-xs md:max-w-md h-auto rounded-md"
                   />
                 </div>
 

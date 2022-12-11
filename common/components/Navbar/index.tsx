@@ -80,10 +80,6 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
             ))}
           </div>
         ) : null}
-        <div
-          className="relative h-screen w-full z-10"
-          onClick={() => setShowMenu((curr) => !curr)}
-        />
       </div>
     </>
   );

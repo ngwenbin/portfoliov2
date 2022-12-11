@@ -89,6 +89,7 @@ const Projects = () => {
                     src={item.image}
                     alt=""
                     className="max-w-xs md:max-w-md h-auto rounded-md"
+                    placeholder="blur"
                   />
                 </div>
 

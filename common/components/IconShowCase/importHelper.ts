@@ -41,3 +41,22 @@ export const technologiesIcon: Array<IconType> = [
   { icon: firebase, name: "Firebase" },
   { icon: figma, name: "Figma" },
 ];
+
+export const allIcon: Array<IconType> = [
+  { icon: c, name: "C" },
+  { icon: javascript, name: "Javascript" },
+  { icon: typescript, name: "Typescript" },
+  { icon: python, name: "Python" },
+  { icon: html, name: "Html" },
+  { icon: css3, name: "CSS" },
+  { icon: git, name: "Git" },
+  { icon: gitlab, name: "Gitlab" },
+  { icon: github, name: "Github" },
+  { icon: gql, name: "GraphQL" },
+  { icon: mysql, name: "SQL" },
+  { icon: react, name: "ReactJS" },
+  { icon: remix, name: "Remix" },
+  { icon: tailwind, name: "TailwindCSS" },
+  { icon: firebase, name: "Firebase" },
+  { icon: figma, name: "Figma" },
+];

@@ -1,26 +1,12 @@
 import { LinkIcon, DownloadIcon } from "@/common/images";
+import {
+  Achievement,
+  ProfessionalExperienceType,
+  Project,
+} from "@/common/types/resume";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-
-interface ProfessionalExperienceType {
-  title: string;
-  company: string;
-  duration: string;
-  country: string;
-  description: string;
-}
-
-interface Project {
-  title: string;
-  description: string;
-  url?: string;
-}
-
-interface Achievement {
-  year: number;
-  achievements: Array<string>;
-}
 
 const professionalExperienceContent: Array<ProfessionalExperienceType> = [
   {
@@ -100,7 +86,7 @@ const Resume = () => {
   return (
     <div className="max-w-3xl mx-auto pt-8 px-4">
       <Head>
-        <title>Resume| Wen Bin</title>
+        <title>Resume | Wen Bin</title>
       </Head>
       <div className="flex items-center gap-x-3">
         <h1>Resume</h1>

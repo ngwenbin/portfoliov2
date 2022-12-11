@@ -24,7 +24,7 @@ const Goals = () => {
   return (
     <div className="max-w-3xl mx-auto pt-8 px-4">
       <Head>
-        <title>Goals| Wen Bin</title>
+        <title>Goals | Wen Bin</title>
       </Head>
       <h1>Goals</h1>
       <div className="flex flex-col space-y-8">

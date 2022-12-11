@@ -33,9 +33,9 @@ const sideProjects: Array<EnrichedProject> = [
     technologies: [
       "Python",
       "ReactJS",
-      "NoSQL (Cloud Firestore)",
       "Firebase",
-      "REST",
+      "NoSQL (Cloud Firestore)",
+      "Rest",
     ],
   },
   {
@@ -46,7 +46,7 @@ const sideProjects: Array<EnrichedProject> = [
     url: "https://b1g1-impact-map.netlify.app/",
     image: ImpactProjectImage,
     ghUrl: "https://github.com/ngwenbin/B1G1-impact-giving-map",
-    technologies: ["ReactJS", "Deck.gl", "REST", "Aloglia Search"],
+    technologies: ["ReactJS", "Deck.gl", "Rest", "Aloglia Search"],
   },
 ];
 
@@ -96,7 +96,7 @@ const Projects = () => {
                 <div className="flex pt-4">
                   {
                     <IconsShowCase
-                      iconClassName="max-w-none !justify-start"
+                      iconClassName="!max-w-none !justify-start"
                       icons={item.technologies.map((tech) => {
                         const icon = allIcon.find(
                           (iconType) => iconType.name === tech

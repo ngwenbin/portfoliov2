@@ -74,11 +74,17 @@ const achievements: Array<Achievement> = [
   },
   {
     year: 2021,
-    achievements: ["Shopee Ultra-Hackathon (Participation)"],
+    achievements: [
+      "Shopee Ultra-Hackathon (Participation)",
+      "NUS NES Ground Zero 2021 (Participation)",
+    ],
   },
   {
     year: 2020,
-    achievements: ["Singapore Airlines (SIA) AppChallenge 2020 (2nd Place)"],
+    achievements: [
+      "Singapore Airlines (SIA) AppChallenge 2020 (2nd Place)",
+      "NUS NES Ground Zero 2020 (Participation)",
+    ],
   },
 ];
 
@@ -170,7 +176,7 @@ const Resume = () => {
             <ol className="list-disc list-inside space-y-1">
               <li>Aug 2019 - Dec 2022</li>
               <li>B. Eng, Mechanical Engineering</li>
-              <li>Second Upper Honours - CAP: 4.44 / 5.0</li>
+              <li>Second Upper Honours - GPA: 4.42 / 5.0</li>
             </ol>
           </li>
           <li className="flex flex-col items-start space-y-2 font-light">
@@ -181,7 +187,7 @@ const Resume = () => {
               <li>Jan 2020 - Jul 2020</li>
               <li>
                 Part of the prestigious NUS Overseas College (NOC)
-                entreprenurship program
+                entrepreneurship program
               </li>
             </ol>
           </li>

@@ -5,7 +5,6 @@ import {
   Project,
 } from "@/common/types/resume";
 import Head from "next/head";
-import Link from "next/link";
 import React from "react";
 
 const professionalExperienceContent: Array<ProfessionalExperienceType> = [
@@ -15,7 +14,10 @@ const professionalExperienceContent: Array<ProfessionalExperienceType> = [
     duration: "Dec 2022 - Present",
     country: "Singapore",
     description:
-      "Building frontend features and components to support next generation B2B e-commerce SaaS products.",
+      "Responsible for the architect and implementation of multiple core features, API interfaces, \
+      leveraging on various design patterns and web rendering patterns. \
+      Led development efforts in building a web analytics pipeline using Segment and device \
+      fingerprinting.",
   },
   {
     title: "Software Engineering Intern",
@@ -96,9 +98,14 @@ const Resume = () => {
       </Head>
       <div className="flex items-center gap-x-3">
         <h1>Resume</h1>
-        <Link href="/resume.pdf" download="ngwenbin_resume.pdf" target="_blank">
+        <a
+          href="/resume.pdf"
+          download="ngwenbin_resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
           <DownloadIcon className="w-5 h-5" />
-        </Link>
+        </a>
       </div>
       <div className="flex pt-4 items-center gap-x-3">
         <a
@@ -153,9 +160,9 @@ const Resume = () => {
                 <div className="flex items-center gap-x-1">
                   <p className="text-lg font-bold">{item.title}</p>
                   {item.url && (
-                    <Link href={item.url}>
+                    <a href={item.url} target="_blank" rel="noreferrer">
                       <LinkIcon className="w-4 h-4 hover:text-cyan-600 text-orange-500" />
-                    </Link>
+                    </a>
                   )}
                 </div>
 

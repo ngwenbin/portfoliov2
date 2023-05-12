@@ -2,7 +2,6 @@ import { EnrichedProject } from "@/common/types/resume";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
 import { allIcon } from "@/common/components/IconShowCase/importHelper";
 import IconsShowCase from "@/common/components/IconShowCase";
 import ImpactProjectImage from "public/assets/impactProject.jpg";
@@ -68,21 +67,23 @@ const Projects = () => {
                 <p className="text-lg font-bold">{item.title}</p>
                 <div className="flex gap-x-2">
                   {item.url && (
-                    <Link
+                    <a
                       href={item.url}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-orange-500"
                     >
                       Demo
-                    </Link>
+                    </a>
                   )}
-                  <Link
+                  <a
                     href={item.ghUrl}
                     target="_blank"
+                    rel="noreferrer"
                     className="text-orange-500"
                   >
                     Github
-                  </Link>
+                  </a>
                 </div>
                 <div className="mx-auto py-8">
                   <Image

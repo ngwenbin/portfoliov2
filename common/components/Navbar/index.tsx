@@ -47,8 +47,8 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
       </div>
       <div
         className={clsx(
-          "md:hidden absolute w-full h-screen",
-          showMenu ? "backdrop-blur-[6px] bg-gray-600/30" : ""
+          "md:hidden absolute w-full h-fit",
+          showMenu ? "backdrop-blur-[6px] bg-gray-600/30 h-screen" : ""
         )}
         onClick={() => console.log("ok")}
       >

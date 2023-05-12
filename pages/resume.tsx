@@ -109,7 +109,7 @@ const Resume = () => {
       </div>
       <div className="flex pt-4 items-center">
         <a
-          href="https://github.com/ngwenbin"
+          href="https://www.github.com/ngwenbin"
           className="text-orange-500 hover:text-cyan-600 mr-3"
           target="_blank"
           rel="noreferrer"
@@ -117,7 +117,7 @@ const Resume = () => {
           Github
         </a>
         <a
-          href="https://sg.linkedin.com/in/ngwenbin"
+          href="https://www.linkedin.com/in/ngwenbin/"
           className="text-orange-500 hover:text-cyan-600"
           target="_blank"
           rel="noreferrer"

@@ -65,13 +65,13 @@ const Projects = () => {
                 className="flex flex-col items-start space-y-2 font-light"
               >
                 <p className="text-lg font-bold">{item.title}</p>
-                <div className="flex gap-x-2">
+                <div className="flex">
                   {item.url && (
                     <a
                       href={item.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-orange-500"
+                      className="text-orange-500 mr-2"
                     >
                       Demo
                     </a>

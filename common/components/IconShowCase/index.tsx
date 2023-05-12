@@ -7,11 +7,17 @@ interface IconShowCaseProps {
   icons: Array<IconType>;
   label?: string;
   iconClassName?: string;
+  className?: string;
 }
 
-const IconsShowCase = ({ icons, label, iconClassName }: IconShowCaseProps) => {
+const IconsShowCase = ({
+  icons,
+  label,
+  iconClassName,
+  className,
+}: IconShowCaseProps) => {
   return (
-    <div className="flex flex-col items-center gap-y-3">
+    <div className={clsx("flex flex-col items-center gap-y-3", className)}>
       {label && <p className="font-semibold text-sm text-gray-700">{label}:</p>}
       <div
         className={clsx(

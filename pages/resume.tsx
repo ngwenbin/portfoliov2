@@ -96,8 +96,8 @@ const Resume = () => {
       <Head>
         <title>Resume | Wen Bin</title>
       </Head>
-      <div className="flex items-center gap-x-3">
-        <h1>Resume</h1>
+      <div className="flex items-center">
+        <h1 className="mr-3">Resume</h1>
         <a
           href="/resume.pdf"
           download="ngwenbin_resume.pdf"
@@ -107,10 +107,10 @@ const Resume = () => {
           <DownloadIcon className="w-5 h-5" />
         </a>
       </div>
-      <div className="flex pt-4 items-center gap-x-3">
+      <div className="flex pt-4 items-center">
         <a
           href="https://github.com/ngwenbin"
-          className="text-orange-500 hover:text-cyan-600"
+          className="text-orange-500 hover:text-cyan-600 mr-3"
           target="_blank"
           rel="noreferrer"
         >
@@ -157,8 +157,8 @@ const Resume = () => {
                 key={key}
                 className="flex flex-col items-start space-y-2 font-light"
               >
-                <div className="flex items-center gap-x-1">
-                  <p className="text-lg font-bold">{item.title}</p>
+                <div className="flex items-center">
+                  <p className="text-lg font-bold mr-1">{item.title}</p>
                   {item.url && (
                     <a href={item.url} target="_blank" rel="noreferrer">
                       <LinkIcon className="w-4 h-4 hover:text-cyan-600 text-orange-500" />

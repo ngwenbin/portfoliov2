@@ -13,7 +13,7 @@ const Layout = ({ children, fonts }: LayoutProps) => {
     <>
       <Navbar tabLinksArray={HomePageNavBarLinks} fonts={fonts} />
       <main
-        className={`${fonts?.className} font-inter left-0 right-0 overflow-auto h-screen min-h-screen relative pb-32`}
+        className={`${fonts?.className} font-inter absolute left-0 right-0 mt-20`}
       >
         {children}
       </main>

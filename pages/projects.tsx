@@ -51,7 +51,7 @@ const sideProjects: Array<EnrichedProject> = [
 
 const Projects = () => {
   return (
-    <div className="max-w-3xl mx-auto pt-8 px-4">
+    <div className="max-w-3xl mx-auto pt-8 px-4 pb-20">
       <Head>
         <title>Projects | Wen Bin</title>
       </Head>

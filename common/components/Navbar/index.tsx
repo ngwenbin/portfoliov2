@@ -21,8 +21,8 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
     setTheme(theme === "light" ? "dark" : "light");
   };
   return (
-    <div className="h-20 relative">
-      <div className="absolute top-0 md:right-0 left-0 md:left-auto h-full flex items-center px-4">
+    <>
+      <div className="absolute top-0 md:right-0 left-0 md:left-auto h-20 flex items-center px-4">
         <Toggle
           id="theme"
           isToggled={theme === "dark"}
@@ -106,7 +106,7 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
           onClick={() => setShowMenu((curr) => !curr)}
         />
       </div>
-    </div>
+    </>
   );
 };
 

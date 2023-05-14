@@ -92,7 +92,7 @@ const achievements: Array<Achievement> = [
 
 const Resume = () => {
   return (
-    <div className="max-w-3xl mx-auto pt-8 px-4">
+    <div className="max-w-3xl mx-auto pt-8 px-4 pb-20">
       <Head>
         <title>Resume | Wen Bin</title>
       </Head>

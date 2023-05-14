@@ -16,7 +16,7 @@ const onClickHandler = () => {
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col justify-between h-[calc(100vh-80px)]">
       <div className="p-2 grid grid-cols-1 items-center h-fit px-4 gap-y-12 justify-center">
         <Head>
           <title>Frontend Engineer | Wen Bin</title>
@@ -60,9 +60,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="text-[10px] font-light text-center pt-8">
+      <div className="text-[11px] font-light text-center py-8">
         Handmade artisan code, built with Next.js
       </div>
-    </>
+    </div>
   );
 }

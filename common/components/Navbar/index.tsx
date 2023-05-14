@@ -5,6 +5,8 @@ import { NextFont } from "@next/font/dist/types";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import { ThreeBars } from "@/common/images";
+import Toggle from "../Toggle";
+import { useTheme } from "next-themes";
 interface NavbarProps {
   tabLinksArray: Array<Navlink>;
   fonts?: NextFont;
@@ -13,12 +15,23 @@ interface NavbarProps {
 const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
   const router = useRouter();
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const { theme, setTheme } = useTheme();
 
+  const handleThemeChange = (state: boolean) => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
   return (
-    <>
+    <div className="h-20 relative">
+      <div className="absolute top-0 md:right-0 left-0 md:left-auto h-full flex items-center px-2">
+        <Toggle
+          id="theme"
+          isToggled={theme === "dark"}
+          onToggle={handleThemeChange}
+        />
+      </div>
       <div
         className={clsx(
-          "items-center gap-x-3 pt-1 absolute px-8 md:flex hidden",
+          "items-center gap-x-3 absolute px-8 md:grid grid-flow-col hidden h-20",
           `${fonts?.className} font-inter`
         )}
       >
@@ -30,7 +43,7 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
               color:
                 router.asPath === tabLink.url && key !== 0
                   ? "#06b6d4"
-                  : "#1f2937",
+                  : "unset",
             }}
             className={clsx(
               "py-3 px-4 rounded-md hover:!text-cyan-500 duration-300 ease-in-out",
@@ -47,19 +60,21 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
       </div>
       <div
         className={clsx(
-          "md:hidden absolute w-full h-fit",
-          showMenu ? "backdrop-blur-[6px] bg-gray-600/30 h-screen" : ""
+          "md:hidden absolute w-full h-fit z-10",
+          showMenu
+            ? "backdrop-blur-[6px] bg-[#E6E8EB]/30 dark:bg-[#2B2F31]/30 h-screen"
+            : ""
         )}
         onClick={() => console.log("ok")}
       >
         <button
-          className="p-4 bg-white absolute right-0 z-10"
+          className="p-5 absolute right-0 z-10"
           onClick={() => setShowMenu((curr) => !curr)}
         >
-          <ThreeBars className="w-6 h-6 text-black" />
+          <ThreeBars className="w-7 h-7" />
         </button>
         {showMenu ? (
-          <div className="flex flex-col max-w-xs bg-white text-right absolute right-0 top-14 z-10 rounded-l-xl">
+          <div className="flex flex-col max-w-xs text-right absolute right-0 top-[68px] z-10 rounded-l-[4px]">
             {tabLinksArray.map((tabLink, key) => (
               <Link
                 key={key}
@@ -68,11 +83,11 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
                   color:
                     router.asPath === tabLink.url && key !== 0
                       ? "#06b6d4"
-                      : "#1f2937",
+                      : "unset",
                 }}
                 onClick={() => setShowMenu((curr) => !curr)}
                 className={clsx(
-                  "py-3 pl-24 pr-4 border-b border border-gray-50 rounded-xl",
+                  "py-3 pl-24 pr-4 !text-[#1A1D1E] dark:!text-[#F8F9FA]",
                   {
                     "font-bold": key === 0,
                   }
@@ -91,7 +106,7 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
           onClick={() => setShowMenu((curr) => !curr)}
         />
       </div>
-    </>
+    </div>
   );
 };
 

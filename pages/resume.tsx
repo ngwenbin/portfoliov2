@@ -104,7 +104,7 @@ const Resume = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <DownloadIcon className="w-5 h-5" />
+          <DownloadIcon className="w-5 h-5 dark:fill-[#ECEDEE] fill-[#11181C]" />
         </a>
       </div>
       <div className="flex pt-4 items-center">
@@ -201,7 +201,7 @@ const Resume = () => {
         </ol>
       </div>
 
-      <div className="my-12 pb-32">
+      <div className="my-12">
         <h2>Achievements</h2>
         {achievements
           .sort((a, b) => (a["year"] < b["year"] ? 1 : -1))

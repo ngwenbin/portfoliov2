@@ -22,7 +22,7 @@ const Navbar = ({ tabLinksArray, fonts }: NavbarProps) => {
   };
   return (
     <div className="h-20 relative">
-      <div className="absolute top-0 md:right-0 left-0 md:left-auto h-full flex items-center px-2">
+      <div className="absolute top-0 md:right-0 left-0 md:left-auto h-full flex items-center px-4">
         <Toggle
           id="theme"
           isToggled={theme === "dark"}

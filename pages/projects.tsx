@@ -56,7 +56,7 @@ const Projects = () => {
         <title>Projects | Wen Bin</title>
       </Head>
       <h1>Projects</h1>
-      <div className="my-12 pb-32">
+      <div className="my-12">
         <ol className="flex flex-col space-y-24 mt-4">
           {sideProjects.map((item, key) => {
             return (

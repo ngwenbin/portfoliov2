@@ -18,7 +18,11 @@ const IconsShowCase = ({
 }: IconShowCaseProps) => {
   return (
     <div className={clsx("flex flex-col items-center gap-y-3", className)}>
-      {label && <p className="font-semibold text-sm text-gray-700">{label}:</p>}
+      {label && (
+        <p className="font-semibold text-sm text-[#687076] dark:text-[#9BA1A6]">
+          {label}:
+        </p>
+      )}
       <div
         className={clsx(
           "flex gap-x-2 flex-wrap justify-center gap-y-2 max-w-sm",
@@ -29,7 +33,7 @@ const IconsShowCase = ({
           return (
             <div
               key={key}
-              className="flex text-xs gap-x-2 px-2 py-1 bg-gray-100 rounded-md text-gray-800 cursor-pointer hover:bg-gray-200 transition-transform duration-500 ease-in-out hover:-translate-y-1"
+              className="flex text-xs gap-x-2 px-2 py-1 bg-[#ECEEF0] hover:bg-[#E6E8EB] text-[#687076] dark:bg-[#26292B] dark:text-[#9BA1A6] dark:hover:bg-[#2B2F31] rounded-md cursor-pointer transition-transform duration-500 ease-in-out hover:-translate-y-1"
             >
               {icon.icon && (
                 <Image src={icon.icon} alt="k" className="w-4 h-auto" />
